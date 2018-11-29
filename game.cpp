@@ -2,6 +2,6 @@
 #include "gameRunner.h"
 
 int main(int argc, char* argv) {
-    Playfield playField = gameRunner.start();
-    gameRunner.sendAction();
+    // Playfield playField = gameRunner.start();
+    // gameRunner.sendAction();
 }

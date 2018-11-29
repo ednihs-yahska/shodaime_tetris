@@ -1,16 +1,14 @@
-#include "model.h"
+#pragma once
+#include "shape/misc.h"
 
-class Payfield {
-    public:
-        Playfield(int playfieldX=10, int playfieldY=20);
-        int[] identifyClearingLines();
-
+class Playfield {
 
     private:
-        int playfieldX = 10;
-        int playfieldY = 20;
-        Model model;
 
-
-    
-}
+    public:
+        int playfieldX;
+        int playfieldY;
+        Cell* playField;
+        Playfield(int playfieldX=10, int playfieldY=20);  
+        ~Playfield();
+};

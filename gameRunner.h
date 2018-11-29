@@ -1,3 +1,7 @@
+#pragma once
+#include "playfield.h"
+#include "shape/shape.h"
+
 enum GameShapeActions {
     RotateLeft,
     RotateRight,
@@ -10,4 +14,14 @@ enum GameActions {
     Pause,
     Play,
     Quit
+};
+
+class GameRunner {
+    public:
+        Playfield* playField;
+        GameRunner(Playfield* pf);
+        Shape* currentShape;
+        Shape* generateShape(long id);
+        void sendTick();
+        ~GameRunner();
 };
